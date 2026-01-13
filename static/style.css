@@ -1,0 +1,184 @@
+/* =========================
+   BASE
+========================= */
+body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #0f172a;          /* dark navy */
+    margin: 0;
+    padding: 12px;                /* compact */
+    color: #e5e7eb;
+}
+
+.dashboard {
+    max-width: 1000px;
+    margin: auto;
+    background: #111827;          /* dark slate */
+    padding: 18px 22px;           /* compact */
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.55);
+}
+
+/* =========================
+   HEADER
+========================= */
+.header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 22px;              /* compact */
+    color: #f9fafb;
+}
+
+.header p {
+    text-align: center;
+    color: #9ca3af;
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+/* =========================
+   METRICS
+========================= */
+.metrics {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 16px 0;               /* compact */
+}
+
+.card {
+    background: #1f2933;
+    flex: 1;
+    padding: 12px;                /* compact */
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #374151;
+}
+
+.label {
+    display: block;
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+.value {
+    display: block;
+    margin-top: 3px;
+    font-size: 20px;              /* compact */
+    font-weight: 600;
+    color: #f9fafb;
+}
+
+/* =========================
+   RISK SECTION
+========================= */
+.risk {
+    margin: 16px 0;
+    padding: 14px;                /* compact */
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.risk-label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #9ca3af;
+}
+
+.risk-value {
+    display: block;
+    font-size: 24px;              /* compact */
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+/* Risk colors (muted & professional) */
+.NORMAL {
+    background: #052e16;
+    color: #4ade80;
+    border-color: #166534;
+}
+
+.WATCH {
+    background: #422006;
+    color: #facc15;
+    border-color: #854d0e;
+}
+
+.WARNING {
+    background: #431407;
+    color: #fb923c;
+    border-color: #9a3412;
+}
+
+.ALARM {
+    background: #450a0a;
+    color: #f87171;
+    border-color: #991b1b;
+}
+
+/* =========================
+   EXPLANATION
+========================= */
+.explanation {
+    text-align: center;
+    font-size: 12px;
+    color: #9ca3af;
+    margin-bottom: 14px;
+}
+
+/* =========================
+   CHARTS
+========================= */
+.charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;                    /* compact */
+}
+
+.chart {
+    background: #1f2933;
+    padding: 8px;                 /* compact */
+    border-radius: 8px;
+    border: 1px solid #374151;
+}
+
+.chart h3 {
+    margin: 0 0 6px 0;
+    font-size: 13px;
+    text-align: center;
+    color: #e5e7eb;
+}
+
+.chart img {
+    width: 100%;
+    max-height: 200px;            /* KEY: prevents scrolling */
+    object-fit: contain;
+    border-radius: 4px;
+    border: 1px solid #374151;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    margin-top: 14px;
+    text-align: center;
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1000px) {
+    .charts {
+        grid-template-columns: 1fr;   /* stack charts */
+    }
+
+    .metrics {
+        flex-direction: column;       /* stack metrics */
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EV Battery Thermal Runaway Monitoring</title>
+
+    <!-- Auto refresh every 3 seconds -->
+    <meta http-equiv="refresh" content="3">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Header -->
+    <header class="header">
+        <h1>EV Battery Thermal Runaway Early Warning</h1>
+        <p>Continuous safety monitoring during EV charging</p>
+    </header>
+
+    <!-- Metrics -->
+    <section class="metrics">
+        <div class="card">
+            <span class="label">Predicted Temperature</span>
+            <span class="value">{{ predicted }} °C</span>
+        </div>
+
+        <div class="card">
+            <span class="label">Actual Temperature</span>
+            <span class="value">{{ actual }} °C</span>
+        </div>
+
+        <div class="card">
+            <span class="label">Residual</span>
+            <span class="value">{{ residual }} °C</span>
+        </div>
+    </section>
+
+    <!-- Risk Status -->
+    <section class="risk {{ risk }}">
+        <span class="risk-label">Current Risk Level</span>
+        <span class="risk-value">{{ risk }}</span>
+    </section>
+
+    <p class="explanation">
+        The system predicts normal battery temperature using a deep learning model and
+        monitors deviation from real measurements to detect early thermal instability.
+    </p>
+
+    <!-- Charts -->
+    <section class="charts">
+        <div class="chart">
+            <h3>Temperature Trend</h3>
+            <img src="{{ url_for('static', filename='temp_plot.png') }}">
+        </div>
+
+        <div class="chart">
+            <h3>Residual Trend</h3>
+            <img src="{{ url_for('static', filename='residual_plot.png') }}">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Auto-updating simulation • LSTM-based Early Warning System</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
