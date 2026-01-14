@@ -1,7 +1,8 @@
 flask
-torch
+gunicorn
 numpy
 pandas
 scikit-learn
+torch
 joblib
 matplotlib
