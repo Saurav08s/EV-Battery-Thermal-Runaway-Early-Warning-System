@@ -121,7 +121,6 @@ GitHub: https://github.com/Saurav08s
 ## 📌 Note
 This project simulates real-time monitoring using historical data and is intended for educational and research purposes.
 
-🔥 This project is not just a model — it is a complete early warning system.
 
 
 
